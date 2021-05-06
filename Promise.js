@@ -52,20 +52,58 @@
 //Promise - eg 3
 
 
-const myPromise = new Promise((myResolve, myReject) => {
-    let x = 0;
-  
-  
-    if (x == 0) {
-      myResolve("Great 🙂");  
+// const myPromise = new Promise((myResolve, myReject) => {
+//     let x = 0;
+
+
+//     if (x == 0) {
+//       myResolve("Great 🙂");  
+//     } else {
+//       myReject("Sorry It is an error 😥");    
+//     }
+//   });
+
+//   myPromise.then((status) => {
+//       console.log(status);
+//   }).catch ((error) => {
+//       console.log(error)
+//   })
+
+//Promise - eg 4 
+
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("done!🙂");
+//         reject("Error");
+//     }, 2000);
+// });
+
+
+// promise.then((result) => {
+//     console.table(result);
+// }).catch((error) => {
+//     console.table(error);
+// })
+
+//Promise - eg 5 
+
+
+const promise = new Promise((resolve, reject) => {
+    const x = "all the best";
+    const y = "all the best";
+    if(x === y) {
+      resolve();
     } else {
-      myReject("Sorry It is an error 😥");    
+      reject();
     }
   });
-  
-  myPromise.then((status) => {
-      console.log(status);
-  }).catch ((error) => {
-      console.log(error)
-  })
+    
+  promise.
+      then( () => {
+          console.log('Success, You are a Genius🙋');  
+      }).
+      catch( () => {
+          console.log('Some error has occured');
+      });
   
