@@ -99,7 +99,7 @@
 //       reject();
 //     }
 //   });
-    
+
 //   promise.
 //       then( () => {
 //           console.log('Success, You are a Genius🙋');  
@@ -107,7 +107,7 @@
 //       catch( () => {
 //           console.log('Some error has occured');
 //       });
-  
+
 //Promise using async-await eg 6
 
 // const pro2 = new Promise((resolve, reject) => {
@@ -117,7 +117,7 @@
 //             reject('Error while communicating');
 //         }, 2000);
 //     });
-    
+
 //     const getbioData = (name) => {
 //         return new Promise((resolve, reject) => {
 //             setTimeout((name) => {
@@ -130,7 +130,7 @@
 //             }, 2000, name);
 //         })
 //     }
-    
+
 //     //promise consumption
 //     async function getData () {
 //         const namedata = await pro2;
@@ -145,27 +145,87 @@
 //     });
 
 
-    //Promise 7 - 
+//Promise 7 - 
 
-    // const promise = new Promise((resolve, reject) => {
-    //     setTimeout(() =>  {
-    //         resolve('hello JS');
-    //         reject("something is wrong")
-    //     }, 2000);
-    // });
-    
-    // promise.then((data) => {
-    //     console.log(data + ' 1');
-    // });
-    
-    // promise.then((data) => {
-    //     console.log(data + ' 2');
-    // });
-    
-    // promise.then((data) => {
-    //     console.log(data + ' 3');
-    // });
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() =>  {
+//         resolve('hello JS');
+//         reject("something is wrong")
+//     }, 2000);
+// });
 
-    // promise.catch ((error) => {
-    //     console.log(error);
-    // })
+// promise.then((data) => {
+//     console.log(data + ' 1');
+// });
+
+// promise.then((data) => {
+//     console.log(data + ' 2');
+// });
+
+// promise.then((data) => {
+//     console.log(data + ' 3');
+// });
+
+// promise.catch ((error) => {
+//     console.log(error);
+// })
+
+
+
+//Promise 8 -
+
+// const willIGetNewPhone = new Promise(
+//      (resolve, reject) => {
+//         const isMomHappy = true;
+//         if (isMomHappy) {
+//             const phone = {
+//                 brand: 'Samsung',
+//                 color: 'black'
+//             };
+//             resolve(phone); 
+//         } else {
+//             const reason = new Error('mom is not happy');
+//             reject(reason);
+//         }
+
+//     }
+// );
+// willIGetNewPhone.then((message) => console.log(message)) .catch((error) => console.log(error));
+
+
+//Promise 9 -
+
+// const showOff = () => {
+//     return new Promise(
+//         (resolve, reject) => {
+//             const phone = {
+//                 brand : "Nokia",
+//                 color : "red"
+//             }
+//             const message = 'Hey friend, I have a new ' +
+//                 phone.color + ' ' + phone.brand + ' phone';
+//             const error = "Hey are u lost somewhere because something is wrong in the code"
+//             resolve(message);
+//             reject(error);
+//         }
+//     );
+// };
+
+// showOff().then((message) => console.log(message)).catch((error) => console.log(error));
+
+
+//Promise 10 -
+
+const learnt = true;
+
+const learnJS = new Promise( (resolve, reject) => {
+    setTimeout(() => {
+        if (learnt) {
+            resolve("I have completed learning JS.");
+        } else {
+            reject("I haven't completed learning JS yet.");
+        }
+    }, 2 * 1000);
+});
+
+learnJS.then((message) => console.log(message)).catch((error) => console.log(error));
